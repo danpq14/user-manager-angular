@@ -4,6 +4,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {UsersListComponent} from '../../component/users-component/users-list/users-list.component';
 import {UsersAddComponent} from '../../component/users-component/users-add/users-add.component';
 import {UsersEditComponent} from '../../component/users-component/users-edit/users-edit.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 const route: Routes = [
   {path: "list", component: UsersListComponent},
@@ -12,9 +14,10 @@ const route: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [UsersListComponent],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(route)
   ]
 })

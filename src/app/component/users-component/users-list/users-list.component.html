@@ -1,1 +1,40 @@
-<p>users-list works!</p>
+<div style="text-align: center">
+  <h3>User List</h3>
+  <div style="display: inline-block">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th><button class="btn btn-primary">Create New User</button></th>
+        <th colspan="4" style="text-align: right">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </th>
+      </tr>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Age</th>
+        <th scope="col">Handle</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!--    <ng-container >-->
+      <tr *ngFor="let user of users">
+        <th scope="row">{{user.id}}</th>
+        <td><a href="">{{user.name}}</a></td>
+        <td>{{user.email}}</td>
+        <td>{{user.age}}</td>
+        <td><button class="btn btn-primary">Edit</button></td>
+        <td><button class="btn btn-danger">Delete</button></td>
+      </tr>
+      <!--    </ng-container>-->
+      </tbody>
+    </table>
+  </div>
+
+
+
+</div>
